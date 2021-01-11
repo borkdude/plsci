@@ -24,6 +24,6 @@ plsci=# select * from plsci('(+ 1 2 3)');
 
 ## License
 
-Copyright © 2019-2020 Michiel Borkent
+Copyright © 2021 Michiel Borkent
 
 Distributed under the EPL License. See LICENSE.
