@@ -2,11 +2,13 @@
 
 ## Build
 
-Requirements:
+### Requirements
 
 - [lein](https://leiningen.org/)
 - [GraalVM CE 20.3.0 Java 11](https://github.com/graalvm/graalvm-ce-builds/releases/tag/vm-20.3.0).
 - [cargo](https://doc.rust-lang.org/stable/cargo/)
+
+### Steps
 
 1. Set `GRAALMV_HOME` to your GraalVM directory (the one that contains the `bin`
    directory).
