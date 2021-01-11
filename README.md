@@ -6,7 +6,7 @@
 
 2. Run `cargo pgx run pg13`. Then try it out:
 
-``` sql
+```
 psql (13.0)
 Type "help" for help.
 
