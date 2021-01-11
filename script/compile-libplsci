@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+if [ -z "$GRAALVM_HOME" ]; then
+    echo "Please set GRAALVM_HOME"
+    exit 1
+fi
+
+"$GRAALVM_HOME/bin/gu" install native-image || true
+export PATH=$GRAALVM_HOME/bin:$PATH
+
+lein uberjar
+
+JAR=target/plsci-0.0.1-SNAPSHOT-standalone.jar
+
+"$GRAALVM_HOME/bin/javac" -cp $JAR src/plsci/Core.java
+
+# "-H:IncludeResources=SCI_VERSION" \
+# -H:ReflectionConfigurationFiles=reflection.json \
+
+"$GRAALVM_HOME/bin/native-image" \
+  -jar $JAR \
+  -cp src \
+  -H:Name=libplsci \
+  --shared \
+  -H:+ReportExceptionStackTraces \
+  -J-Dclojure.spec.skip-macros=true \
+  -J-Dclojure.compiler.direct-linking=true \
+  --initialize-at-build-time  \
+  -H:Log=registerResource: \
+  --verbose \
+  --no-fallback \
+  --no-server \
+  "-J-Xmx3g"
+
+mv graal_isolate_dynamic.h libplsci.h graal_isolate.h libplsci.dylib libplsci_dynamic.h target
