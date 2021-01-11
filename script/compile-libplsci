@@ -35,3 +35,4 @@ JAR=target/plsci-0.0.1-SNAPSHOT-standalone.jar
   "-J-Xmx3g"
 
 mv graal_isolate_dynamic.h libplsci.h graal_isolate.h libplsci.dylib libplsci_dynamic.h target
+install_name_tool -id "$PWD/target/libplsci.dylib" target/libplsci.dylib
