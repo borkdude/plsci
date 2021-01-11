@@ -5,7 +5,7 @@
 ### Requirements
 
 - [lein](https://leiningen.org/)
-- [GraalVM CE 20.3.0 Java 11](https://github.com/graalvm/graalvm-ce-builds/releases/tag/vm-20.3.0).
+- [GraalVM CE 20.3.0 Java 11](https://github.com/graalvm/graalvm-ce-builds/releases/tag/vm-20.3.0)
 - [cargo](https://doc.rust-lang.org/stable/cargo/)
 
 ### Steps
