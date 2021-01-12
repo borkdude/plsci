@@ -4,7 +4,7 @@ use std::env;
 use std::path::PathBuf;
 
 fn main() {
-    let path = "target";
+    let path = "libsci";
 
     println!("cargo:rustc-link-lib=plsci");
 
