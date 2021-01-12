@@ -22,7 +22,7 @@ next.
 
 2. Run `script/compile-libplsci`.  Currently this build script contains some
    macOS-specific things like `.dylib` and `install_name_tool`. This will be
-   made more portable later on.
+   made more portable later on (PR welcome).
 
 2. Run `cargo pgx run pg13`. Then try it out:
 
