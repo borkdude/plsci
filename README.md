@@ -1,5 +1,12 @@
 # pl/sci
 
+[![project chat](https://img.shields.io/badge/slack-join_chat-brightgreen.svg)](https://app.slack.com/client/T03RZGPFR/C015LCR9MHD)
+
+## Status
+
+This is very much an experiment and I'm open to feedback where to take this
+next.
+
 ## Build
 
 ### Requirements
