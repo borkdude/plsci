@@ -4,7 +4,7 @@
 
 ## Status
 
-This is very much an experiment and I'm open to feedback where to take this
+This is very much an experiment and I'm open to feedback on where to take this
 next.
 
 ## Build
