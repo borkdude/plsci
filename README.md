@@ -17,7 +17,7 @@ next.
 
 ### Steps
 
-1. Set `GRAALMV_HOME` to your GraalVM directory (the one that contains the `bin`
+1. Set `GRAALVM_HOME` to your GraalVM directory (the one that contains the `bin`
    directory).
 
 2. Run `script/compile-libplsci`.  Currently this build script contains some
