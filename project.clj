@@ -6,7 +6,7 @@
   :license {:name "Eclipse Public License 1.0"
             :url "http://opensource.org/licenses/eclipse-1.0.php"}
   :source-paths ["src"]
-  :target-path "libsci"
+  :target-path "libplsci"
   :compile-path "%s/classes/main"
   :dependencies [[borkdude/sci "0.2.0"]
                  [cheshire/cheshire "5.10.0"]
