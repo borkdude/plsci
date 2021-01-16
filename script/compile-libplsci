@@ -10,9 +10,10 @@ fi
 "$GRAALVM_HOME/bin/gu" install native-image || true
 export PATH=$GRAALVM_HOME/bin:$PATH
 
-lein uberjar
+clojure -X:native:uberjar
 
-JAR=libplsci/plsci-0.0.1-SNAPSHOT-standalone.jar
+#_ JAR=libplsci/plsci-0.0.1-SNAPSHOT-standalone.jar
+JAR=plsci.jar
 
 "$GRAALVM_HOME/bin/javac" -cp $JAR src/plsci/Core.java
 

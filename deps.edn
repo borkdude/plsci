@@ -1,0 +1,13 @@
+{:deps {borkdude/sci {:mvn/version "0.2.0"}
+        cheshire/cheshire {:mvn/version "5.10.0"}
+        borkdude/clj-reflector-graal-java11-fix {:mvn/version "0.0.1-graalvm-20.3.0"}}
+ :aliases {:uberjar
+           {:replace-deps ; tool usage is new in 2.x
+            {seancorfield/depstar {:mvn/version "2.0.165"}}
+            :ns-default hf.depstar
+            :exec-fn uberjar
+            :exec-args {:jar plsci.jar
+                        :compile-ns [plsci.core]
+                        :aliases [:native]}}
+           :native {:jvm-opts ["-Dclojure.compiler.direct-linking=true"]
+                    :extra-deps {org.clojure/clojure {:mvn/version "1.10.2-rc2"}}}}}
