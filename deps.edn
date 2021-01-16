@@ -6,7 +6,8 @@
             {seancorfield/depstar {:mvn/version "2.0.165"}}
             :ns-default hf.depstar
             :exec-fn uberjar
-            :exec-args {:jar plsci.jar
+            :exec-args {:main-class plsci.core
+                        :jar plsci.jar
                         :compile-ns [plsci.core]
                         :aliases [:native]}}
            :native {:jvm-opts ["-Dclojure.compiler.direct-linking=true"]
