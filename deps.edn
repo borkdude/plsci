@@ -1,5 +1,4 @@
-{:deps {org.clojure/clojure "1.10.2-rc3"
-        borkdude/sci {:mvn/version "0.2.0"}
+{:deps {borkdude/sci {:mvn/version "0.2.0"}
         cheshire/cheshire {:mvn/version "5.10.0"}
         borkdude/sci.impl.reflector {:mvn/version "0.0.1-jdk11"}
         borkdude/clj-reflector-graal-java11-fix {:mvn/version "0.0.1-graalvm-20.3.0"}}
@@ -17,4 +16,4 @@
                         :compile-ns [plsci.core]
                         :aliases [:native]}}
            :native {:jvm-opts ["-Dclojure.compiler.direct-linking=true"]
-                    :extra-deps {org.clojure/clojure {:mvn/version "1.10.2-rc2"}}}}}
+                    :extra-deps {org.clojure/clojure {:mvn/version "1.10.2-rc3"}}}}}
