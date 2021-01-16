@@ -3,3 +3,4 @@
 /libplsci
 **/*.class
 /plsci.jar
+/pom.xml
